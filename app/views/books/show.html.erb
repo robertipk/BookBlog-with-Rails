@@ -1,8 +1,25 @@
-<h2> <%= @book.title %> </h2>
-<h2> <%= @book.author %> </h2>
-<h2> <%= @book.description %> </h2>
-<h2> Category:  <%= @book.category.name %> </h2>
+<div class="container">
+	<div class="row">
+		<div class="col-md-4">
+			<%= image_tag @book.book_img.url(:book_show), class: "book-show" %>
+		</div>
+		<div class="col-md-8" id="needspace">
+			<h2> <%= @book.title %> </h2>
+			<h3> <%= @book.author %> </h3>
+			<h4> <%= @book.description %> </h4>
+		</div>
 
+	</div>
+</div>
+
+<br>
+
+<div class="row">
+
+	<div class="col-md-4">
+		<!--where the reviews and ratings will go -->
+	</div>
+</div>
 
 
 <br>
