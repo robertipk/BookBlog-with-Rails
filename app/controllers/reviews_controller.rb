@@ -10,9 +10,10 @@ class ReviewsController < ApplicationController
 		@review.user_id = current_user.id
 
 		if @review.save
-			redirect_to_book_path(@book)
+			redirect_to book_path(@book)
 		else
 			render 'new'
+		end
 	end
 
 	private
