@@ -7,8 +7,11 @@ class ReviewsController < ApplicationController
 
 	def create
 		@review = Review.new(review_params)
-		@review.book_id = @book_id
+		@review.book_id = @book.id
 		@review.user_id = current_user.id
+		p "*************************"
+		p current_user.id
+		p @book_id
 
 		if @review.save
 			redirect_to book_path(@book)
